@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicodev - Tetrix Game</title>
+</head>
+<style>
+    :root {
+        font-family: "Anonymous Pro", monospace;
+        line-height: 1.5;
+        font-weight: 400;
+        color-scheme: dark light;
+        color: #fff;
+        background-color: #7f7f7f;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-content: center;
+    }
+
+    #game {
+        display: grid;
+        place-content: center;
+        background-color: #800080;
+        padding: 0 1rem 0;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+        #label {
+            font-size: 1rem;
+            font-weight: 700;
+
+            a {
+                color: #ff7f00;
+                text-decoration: none;
+            }
+        }
+
+        #level-text {
+            font-size: .8rem;
+            font-weight: 700;
+            margin-top: -.5rem;
+        }
+
+        #tetris {
+            background-color: #000;
+            border-radius: 5px;
+            margin-bottom: .8rem;
+        }
+
+        #start-button {
+            font-family: "Anonymous Pro", monospace;
+            padding: .3rem 1rem;
+            font-size: .9rem;
+            font-weight: 700;
+            background-color: #ff7f00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+    }
+</style>
+<body>
+
+<div id="game">
+    <p id="label">Tetris Rush - By
+        <a href="https://github.com/vmorenoz" target="_blank">@Vicodev</a>
+    </p>
+    <p id="level-text">Level: <span id="level">0</span></p>
+    <canvas id="tetris"></canvas>
+    <button id="start-button">Start Game</button>
+</div>
+
+<script src="./main.js"></script>
+</body>
+</html>
